@@ -192,6 +192,12 @@ const cards = [
   }
 ];
 
+// 🔥 PRELOAD IMAGES FOR SMOOTH PERFORMANCE
+cards.forEach(card => {
+  const preloadImg = new Image();
+  preloadImg.src = card.image;
+});
+
 let order = cards.map((_,i)=>i);
 let idx = 0;
 const audio = new Audio();
